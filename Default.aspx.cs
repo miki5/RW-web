@@ -11,16 +11,20 @@ namespace RW
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // you can put you code here
+            if (!IsPostBack)
+            {
+                TextBox1.Text = "example1";
+                TextBox2.Text = "example2";
+            }
         }
 
         protected void Submit(object sender, EventArgs e)
         {
-            string name = Request.Form["brukernavn"];
-            string pass = Request.Form["passord"];
+            string name = TextBox1.Text;
+            string pass = TextBox2.Text;
 
             Response.Redirect("Rapport.aspx?name=" + name + "&pass=" + pass);
         }
-
     }
 }

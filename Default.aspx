@@ -6,11 +6,11 @@
         <p class="lead">Oppgi din passord for tilgang til din fullstendige rapport for obligatorisk tjenestepensjon:</p>
             <div class="mt-30">
                 Brukernavn
-                <input type="text" class="ml-30" id="txtName" name="brukernavn" value="" />
+                <asp:TextBox class="ml-30" ID="TextBox1" runat="server" Text="" />
              </div>
              <div class="mb-35"><br />
                 Passord
-                <input type="password" class="ml-50" id="txtPass" name="passord" value="" />
+                <asp:TextBox class="ml-50" ID="TextBox2" runat="server" Text="" />
             </div>
             <asp:Button ID="Button1" class="btn btn-primary btn-lg" OnClick="Submit" runat="server" Text="Hent rapport" />
     </div>
